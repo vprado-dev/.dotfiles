@@ -1,14 +1,18 @@
-# .dotfiles
+# .dotfiles - Zorin OS
 
+## Required dependecies
+```bash
+- go #For asdf
+``` 
 ## As root
 
 ```sh
-pacman -Syu
-pacman -S base-devel curl git less make neovim stow sudo tmux vi vim zsh
+sudo apt update && sudo apt upgrade
+sudo apt install curl git less make neovim stow sudo tmux vi vim zsh
 
 chsh -s /bin/zsh
 
-useradd -m -G wheel -s /bin/zsh <username>
+sudo usermod -aG sudo username
 passwd <username>
 
 chmod +w /etc/sudoers

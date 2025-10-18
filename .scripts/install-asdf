@@ -1,0 +1,18 @@
+#!/bin/sh
+
+install_required_packages() {
+  sudo apt install git bash &&
+  sudo apt-get install dirmngr gpg curl gawk
+}
+
+download_asdf_binary() {
+  # shellcheck disable=SC2046
+  cd /tmp && wget https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-linux-amd64.tar.gz
+}
+
+install_asdf(){
+  cd /tmp && sudo tar -C ~/.asdf -xzf asdf-v0.18.0-linux-amd64.tar.gz
+}
+
+install_required_packages && download_asdf_binary &&
+  install_asdf

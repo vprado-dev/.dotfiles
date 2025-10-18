@@ -4,12 +4,12 @@ script_dir="$(realpath "$(dirname "$0")")"
 packages_filename="$(realpath "$script_dir/../.packages")"
 
 update_packages() {
-  yay -Syu
+  sudo apt update && sudo apt upgrade
 }
 
 install_packages() {
   # shellcheck disable=SC2046
-  yay -S --needed $(cat "$packages_filename")
+  sudo apt install -y $(cat "$packages_filename")
 }
 
 update_packages &&

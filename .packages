@@ -1,12 +1,5 @@
-docker
-docker-compose
 htop
 nodejs
-npm
-asdf-vm
-oh-my-zsh-git
 rsync
 shellcheck
-yarn
 net-tools
-rust

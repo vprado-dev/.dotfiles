@@ -15,6 +15,10 @@ zsh:
 		&& rm ~/.zshrc \
 		&& stow --no-folding -t ~ zsh
 
+.PHONY: asdf
+asdf:
+	./.scripts/install-asdf
+
 .PHONY: cfg-docker
 cfg-docker:
 	./.scripts/configure-docker
